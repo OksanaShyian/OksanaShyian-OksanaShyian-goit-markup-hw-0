@@ -38,9 +38,6 @@ img {
 .link {
 	text-decoration: none;
 	cursor: pointer;
-	transition-property: color, background-color, box-shadow;
-	transition-duration: 250ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .h1,
 .h2,
@@ -127,12 +124,19 @@ img {
 	align-items: center;
 }
 
-.contacts-link:hover,
-.contacts-link:focus {
+.item-link,
+.contact-link .header-icons,
+.contact-link {
+	transition-property: color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contact-link:hover,
+.contact-link:focus {
 	color: var(--accent-text-color);
 }
-.contacts-link:hover .header-icons,
-.contacts-link:focus .header-icons {
+.contact-link:hover .header-icons,
+.contact-link:focus .header-icons {
 	color: var(--accent-text-color);
 }
 .header-icons {
@@ -201,6 +205,7 @@ img {
 .button:hover,
 .button:focus {
 	opacity: 0.9;
+	cursor: pointer;
 }
 
 /* ---------------------SECTION----------------- */
@@ -351,6 +356,12 @@ img {
 	align-items: center;
 	justify-content: center;
 }
+.about-soc-link,
+.about-soc-link .about-soc-icon {
+	transition-property: background-color, fill;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 .about-soc-link:hover,
 .about-soc-link:focus {
 	background-color: var(--accent-text-color);
@@ -395,7 +406,8 @@ img {
 	justify-content: center;
 	cursor: pointer;
 }
-.client-icon {
+.client-icon,
+.client-link {
 	fill: #afb1b8;
 	transition-property: border-color, fill;
 	transition-duration: 250ms;
@@ -436,6 +448,9 @@ img {
 	line-height: 1.71;
 	letter-spacing: 0.03em;
 	font-style: normal;
+	transition-property: color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .adress-link {
 	color: var(--primary-white-color);
@@ -477,6 +492,9 @@ img {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	transition-property: background-color, fill;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-soc-link:hover {
 	background-color: var(--accent-text-color);
@@ -598,7 +616,7 @@ img {
 	margin: 0;
 	padding: 63px 24px;
 	height: 100%;
-	transform: translateY(100%);
+	transform: translateY(101%);
 	transition: transform 250ms linear;
 }
 .portfolio-name {
@@ -632,6 +650,9 @@ img {
 }
 .portfolio-link {
 	display: block;
+	transition-property: box-shadow;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-link:hover {
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
