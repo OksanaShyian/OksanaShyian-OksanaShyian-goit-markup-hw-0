@@ -355,10 +355,7 @@ img {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-}
-.about-soc-link,
-.about-soc-link .about-soc-icon {
-	transition-property: background-color, fill;
+	transition-property: background-color;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -372,6 +369,9 @@ img {
 }
 .about-soc-icon {
 	fill: #afb1b8;
+	transition-property: fill;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*---------------------CLIENT-------------------*/
 .client {
@@ -405,11 +405,13 @@ img {
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
+	transition-property: border-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.client-icon,
-.client-link {
+.client-icon {
 	fill: #afb1b8;
-	transition-property: border-color, fill;
+	transition-property: fill;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -516,14 +518,13 @@ img {
 	transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1), visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
 	z-index: 2;
 }
-.backdrop.is-hidden {
+.is-hidden {
 	opacity: 0;
 	pointer-events: none;
 	visibility: hidden;
 }
 .backdrop.is-hidden .modal {
 	transform: translate(-50%, -50%) scale(0) rotate(180deg);
-	opacity: 0;
 }
 .modal {
 	position: absolute;
@@ -592,9 +593,7 @@ img {
 .portfolio-item {
 	flex-basis: calc((100% - 2 * 30px) / 3);
 }
-.portfolio-item:hover .portfolio-ap-text {
-	transform: translateY(0%);
-}
+
 .portfolio-top-wrap {
 	position: relative;
 	overflow: hidden;
@@ -656,4 +655,7 @@ img {
 }
 .portfolio-link:hover {
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.portfolio-link:hover .portfolio-ap-text {
+	transform: translateY(0%);
 }
